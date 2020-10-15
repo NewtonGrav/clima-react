@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Formulario = ({ busqueda, setBusqueda }) => {
+const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 	const { ciudad, pais } = busqueda;
 
 	const [error, setError] = useState(false);
@@ -21,7 +21,7 @@ const Formulario = ({ busqueda, setBusqueda }) => {
 		}
 		setError(false);
 
-		//TODO Pasar a comp principal
+    setHayConsulta(true);
 	};
 
 	return (

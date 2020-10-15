@@ -9,9 +9,11 @@ function App() {
 	});
 	const { ciudad, pais } = busqueda;
 
+	const [hayConsulta, setHayConsulta] = useState(false);
+
 	useEffect(() => {
 		console.log(ciudad);
-	}, [ciudad, pais])
+	}, [hayConsulta])
 
 	return (
 		<Fragment>
@@ -21,7 +23,7 @@ function App() {
 				<div className='contenedor'>
 					<div className='row'>
 						<div className='col m6 s12'>
-							<Formulario busqueda={busqueda} setBusqueda={setBusqueda} />
+							<Formulario busqueda={busqueda} setBusqueda={setBusqueda} setHayConsulta={setHayConsulta} />
 						</div>
 						<div className='col m6 s12'>Resultado</div>
 					</div>
