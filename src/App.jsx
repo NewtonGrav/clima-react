@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import Header from './components/Header';
 import Formulario from './components/Formulario';
+import Clima from './components/Clima';
 
 function App() {
 	const [busqueda, setBusqueda] = useState({
@@ -25,9 +26,8 @@ function App() {
 		};
 
 		consultarApi();
+		setHayConsulta(false);
 
-		// TODO resetear hayConsulta
-		
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [hayConsulta]);
 
@@ -36,7 +36,7 @@ function App() {
 			<Header titulo='Clima React App' />
 
 			<div className='contenedor-form'>
-				<div className='contenedor'>
+				<div className='container'>
 					<div className='row'>
 						<div className='col m6 s12'>
 							<Formulario
@@ -45,7 +45,9 @@ function App() {
 								setHayConsulta={setHayConsulta}
 							/>
 						</div>
-						<div className='col m6 s12'>Resultado</div>
+						<div className='col m6 s12'>
+							<Clima resultado={resultado} />
+						</div>
 					</div>
 				</div>
 			</div>
