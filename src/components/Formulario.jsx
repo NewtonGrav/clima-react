@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 
-const Formulario = () => {
-	const [busqueda, setBusqueda] = useState({
-		ciudad: '',
-		pais: '',
-	});
+const Formulario = ({ busqueda, setBusqueda }) => {
 	const { ciudad, pais } = busqueda;
 
 	const [error, setError] = useState(false);
@@ -30,7 +26,9 @@ const Formulario = () => {
 
 	return (
 		<form onSubmit={handlerSubmit}>
-			{error ? <p className='error red darken-3'>Todos los campos son obligatorios</p> : null}
+			{error ? (
+				<p className='error red darken-3'>Todos los campos son obligatorios</p>
+			) : null}
 
 			<div className='input-field s12'>
 				<input
