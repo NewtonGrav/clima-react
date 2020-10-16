@@ -77,3 +77,12 @@ input[type='text']:not(.browser-default):focus:not([readonly]) + label {
 	text-align: center !important;
 	color: #fff !important;
 }
+
+.flex {
+	display: flex;
+}
+
+.flex-center {
+	justify-content: center;
+	align-items: center;
+}

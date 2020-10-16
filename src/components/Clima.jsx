@@ -18,13 +18,16 @@ const Clima = ({ resultado }) => {
 			<div className='black-text'>
 				<h2>{name}</h2>
 
+				<p className='temperatura light-blue-text text-darken-2'>
 					{kelvinToCelsius(main?.temp)} <span>&#x2103;</span>
 				</p>
 
+				<p className='flex flex-center'>
 					<i className='material-icons'>arrow_drop_up</i>
 					{kelvinToCelsius(main?.temp_max)} <span>&#x2103;</span>
 				</p>
 
+				<p className='flex flex-center'>
 					<i className='material-icons'>arrow_drop_down</i>
 					{kelvinToCelsius(main?.temp_min)} <span>&#x2103;</span>
 				</p>
