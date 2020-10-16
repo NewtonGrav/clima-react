@@ -17,15 +17,15 @@ const Clima = ({ resultado }) => {
 		<div className='card-panel white col s12'>
 			<div className='black-text'>
 				<h2>{name}</h2>
-				<p className='temperatura'>
+
 					{kelvinToCelsius(main?.temp)} <span>&#x2103;</span>
 				</p>
-				<p>
-					<span>Máxima </span>
+
+					<i className='material-icons'>arrow_drop_up</i>
 					{kelvinToCelsius(main?.temp_max)} <span>&#x2103;</span>
 				</p>
-				<p>
-					<span>Mínima </span>
+
+					<i className='material-icons'>arrow_drop_down</i>
 					{kelvinToCelsius(main?.temp_min)} <span>&#x2103;</span>
 				</p>
 			</div>
