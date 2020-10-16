@@ -3,6 +3,8 @@ import React from 'react';
 const Clima = ({ resultado }) => {
 	const { name, main } = resultado;
 
+	if (!name) return null;
+
 	const kelvinToCelsius = (kelvin) => {
 		if (!kelvin) return null;
 
