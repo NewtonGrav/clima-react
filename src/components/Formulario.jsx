@@ -57,11 +57,12 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 			</div>
 
 			<div className='input-field s12'>
-				<input
+				<button
 					type='submit'
-					value='Obtener Clima'
-					className='waves-effect waves-light btn-large btn-block yellow accent-4 '
-				></input>
+					className='waves-effect waves-light btn-large btn-block yellow accent-4 black-text'
+				>
+					Obtener Clima
+				</button>
 			</div>
 		</form>
 	);

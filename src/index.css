@@ -3,10 +3,12 @@ body {
 	padding: 0;
 	font-family: sans-serif;
 }
+
 nav .brand-logo {
 	display: block;
 	position: relative;
 }
+
 .input-field label {
 	color: white;
 }
@@ -37,27 +39,34 @@ input[type='text']:not(.browser-default):focus:not([readonly]) + label {
 	padding: 3rem 0 1px 0;
 	background-color: #03a9f4;
 }
+
 .mensaje {
 	font-size: 2rem;
 }
+
 .buscador i {
 	width: 100%;
 }
+
 .error {
 	padding: 1rem !important;
 	color: white;
 	margin-top: 3rem;
 	text-emphasis: left;
 }
+
 .card-panel h2 {
 	font-size: 1.6rem;
 }
+
 .card-panel p {
 	font-size: 1.4rem;
 }
+
 .temperatura {
 	font-size: 4rem !important;
 }
+
 .temperatura span {
 	font-size: 2rem !important;
 	vertical-align: super;
@@ -65,6 +74,10 @@ input[type='text']:not(.browser-default):focus:not([readonly]) + label {
 
 .btn-block {
 	display: block !important;
+}
+
+.btn-large {
+	width: 100%;
 }
 
 .error {
