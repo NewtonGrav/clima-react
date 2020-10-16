@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Error from './Error';
 
 const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 	const { ciudad, pais } = busqueda;
@@ -21,14 +22,12 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 		}
 		setError(false);
 
-    setHayConsulta(true);
+		setHayConsulta(true);
 	};
 
 	return (
 		<form onSubmit={handlerSubmit}>
-			{error ? (
-				<p className='error red darken-3'>Todos los campos son obligatorios</p>
-			) : null}
+			{error ? <Error mensaje='Todos los campos son obligatorios' /> : null}
 
 			<div className='input-field s12'>
 				<input

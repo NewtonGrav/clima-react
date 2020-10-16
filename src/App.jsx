@@ -2,6 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react';
 import Header from './components/Header';
 import Formulario from './components/Formulario';
 import Clima from './components/Clima';
+import Error from './components/Error';
 
 function App() {
 	const [busqueda, setBusqueda] = useState({
@@ -46,7 +47,11 @@ function App() {
 							/>
 						</div>
 						<div className='col m6 s12'>
-							<Clima resultado={resultado} />
+							{resultado.cod === '404' ? (
+								<Error mensaje='No hay resultados para la ciudad especificada' />
+							) : (
+								<Clima resultado={resultado} />
+							)}
 						</div>
 					</div>
 				</div>
