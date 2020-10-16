@@ -15,8 +15,8 @@ const Clima = ({ resultado }) => {
 
 	return (
 		<div className='card-panel white col s12'>
-			<div className='black-text'>
-				<h2>{name}</h2>
+			<div className='black-text center-align'>
+				<h2 className=''>{name}</h2>
 
 				<p className='temperatura light-blue-text text-darken-2'>
 					{kelvinToCelsius(main?.temp)} <span>&#x2103;</span>
