@@ -25,6 +25,12 @@ const Clima = ({ resultado }) => {
 				<div className='content has-black-text has-text-centered'>
 					<h1 className='title'>{name}</h1>
 
+					<div className='is-flex is-align-items-center	'>
+						<img
+							src={`http://openweathermap.org/img/wn/${resultado.weather[0].icon}@2x.png`}
+							alt='Icon weather'
+							className=''
+						/>
 						<h2 className='is-flex has-text-link is-size-1 has-text-weight-bold	my-0'>
 							<span>{kelvinToCelsius(main?.temp)}</span>
 							{celsiusLogo()}
