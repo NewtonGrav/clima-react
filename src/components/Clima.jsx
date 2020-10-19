@@ -49,15 +49,15 @@ const Clima = ({ resultado }) => {
 
 						<div className='is-flex column is-justify-content-center'>
 							<p className='is-flex my-0 mr-4'>
-								<i className='material-icons is-align-self-center mr-2'>arrow_drop_down</i>
-								<span className='is-flex has-text-weight-bold'>
+								<i className='material-icons is-align-self-center mr-1 is-size-2'>arrow_drop_down</i>
+								<span className='is-flex is-align-self-center	has-text-weight-bold'>
 									{kelvinToCelsius(main?.temp_min)}
 									{celsiusIcon()}
 								</span>
 							</p>
 							<p className='is-flex'>
-								<i className='material-icons is-align-self-center mr-2'>arrow_drop_up</i>
-								<span className='is-flex has-text-weight-bold'>
+								<i className='material-icons is-align-self-center mr-1 is-size-2'>arrow_drop_up</i>
+								<span className='is-flex is-align-self-center	has-text-weight-bold'>
 									{kelvinToCelsius(main?.temp_max)}
 									{celsiusIcon()}
 								</span>
