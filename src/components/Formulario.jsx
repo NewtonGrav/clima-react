@@ -46,23 +46,17 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 			</div>
 			</div>
 
-			<div className='input-field s12'>
+			<label className='label has-text-white' htmlFor='pais'>
+				País
+			</label>
+			<div class='control'>
+				<div class='select'>
 				<select name='pais' id='pais' value={pais} onChange={handlerChange}>
-					<option value='' disabled>
-						-- Seleccionar un país --
-					</option>
-					<option value='US'>Estados Unidos</option>
-					<option value='MX'>México</option>
-					<option value='AR'>Argentina</option>
-					<option value='CO'>Colombia</option>
-					<option value='CR'>Costa Rica</option>
-					<option value='ES'>España</option>
-					<option value='PE'>Perú</option>
+						{listaPaises}
 				</select>
-				<label htmlFor='pais'>País</label>
+				</div>
 			</div>
 
-			<div className='input-field s12'>
 				<button
 					type='submit'
 					className='waves-effect waves-light btn-large btn-block yellow accent-4 black-text'
