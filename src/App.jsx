@@ -35,7 +35,7 @@ function App() {
 	return (
 		<Fragment>
 			<Header titulo='Clima React App' />
-			<div className='has-background-link pt-6'>
+			<div className='has-background-info py-6'>
 				<div className='container'>
 					<div className='columns'>
 						<div className='column is-6'>
