@@ -14,23 +14,27 @@ const Clima = ({ resultado }) => {
 	};
 
 	return (
-		<div className='card-panel white col s12'>
-			<div className='black-text center-align'>
-				<h2 className=''>{name}</h2>
+		<div className='card'>
+			<div className='card-content'>
+				<div className='content has-black-text has-text-centered'>
+					<h1 className='title'>{name}</h1>
 
-				<p className='temperatura light-blue-text text-darken-2'>
-					{kelvinToCelsius(main?.temp)} <span>&#x2103;</span>
-				</p>
+					<h2 className='has-text-link is-size-1 has-text-weight-bold		'>
+						{kelvinToCelsius(main?.temp)} <span>°C</span>
+					</h2>
 
-				<p className='flex flex-center'>
-					<i className='material-icons'>arrow_drop_up</i>
-					{kelvinToCelsius(main?.temp_max)} <span>&#x2103;</span>
-				</p>
+					<div className='is-size-4	'>
+						<p className='flex flex-center'>
+							<i className='material-icons'>arrow_drop_up</i>
+							{kelvinToCelsius(main?.temp_max)} <span>°C</span>
+						</p>
 
-				<p className='flex flex-center'>
-					<i className='material-icons'>arrow_drop_down</i>
-					{kelvinToCelsius(main?.temp_min)} <span>&#x2103;</span>
-				</p>
+						<p className='flex flex-center'>
+							<i className='material-icons'>arrow_drop_down</i>
+							{kelvinToCelsius(main?.temp_min)} <span>°C</span>
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
