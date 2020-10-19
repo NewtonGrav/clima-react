@@ -60,9 +60,9 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 				<div className='control'>
 					<input
 						id='ciudad'
-						className='input'
+						className='input is-medium'
 						type='text'
-						placeholder='Ciudad'
+						placeholder='Ej. Buenos Aires'
 						name='ciudad'
 						value={ciudad}
 						onChange={handlerChange}
