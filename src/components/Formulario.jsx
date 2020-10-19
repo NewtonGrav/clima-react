@@ -94,7 +94,7 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 			</div>
 
 			<div className='control mt-6'>
-				<button type='submit' className='button is-warning is-medium is-fullwidth'>
+				<button type='submit' className='button is-warning is-large is-fullwidth'>
 					Obtener Clima
 				</button>
 			</div>
