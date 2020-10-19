@@ -13,7 +13,7 @@ const Clima = ({ resultado }) => {
 		return parseFloat(kelvin + ABSOLUTE_ZERO).toFixed(1);
 	};
 
-	const celsiusLogo = () => (
+	const celsiusIcon = () => (
 		<span className='ml-2 is-size-6 is-align-self-flex-start'>°C</span>
 	);
 
@@ -32,7 +32,7 @@ const Clima = ({ resultado }) => {
 
 						<h2 className='is-flex has-text-link is-size-1 has-text-weight-bold	my-0'>
 							<span>{kelvinToCelsius(main?.temp)}</span>
-							{celsiusLogo()}
+							{celsiusIcon()}
 						</h2>
 					</div>
 
@@ -41,7 +41,7 @@ const Clima = ({ resultado }) => {
 							<p className='is-flex my-0 has-text-weight-bold'>
 								<span className=''>Sensación Térmica: </span>
 								{kelvinToCelsius(main?.feels_like)}
-								{celsiusLogo()}
+								{celsiusIcon()}
 							</p>
 						</div>
 
@@ -49,12 +49,12 @@ const Clima = ({ resultado }) => {
 							<p className='is-flex my-0 mr-4'>
 								<i className='material-icons is-align-self-center'>arrow_drop_down</i>
 								{kelvinToCelsius(main?.temp_min)}
-								{celsiusLogo()}
+								{celsiusIcon()}
 							</p>
 							<p className='is-flex'>
 								<i className='material-icons is-align-self-center'>arrow_drop_up</i>
 								{kelvinToCelsius(main?.temp_max)}
-								{celsiusLogo()}
+								{celsiusIcon()}
 							</p>
 						</div>
 					</div>
