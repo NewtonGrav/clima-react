@@ -2,10 +2,10 @@ import React from 'react';
 
 const Header = ({ titulo }) => {
 	return (
-		<section class='hero is-link is-bold'>
-			<div class='hero-body'>
-				<div class='container'>
-					<h1 class='title has-text-centered'>{titulo}</h1>
+		<section className='hero is-link is-bold'>
+			<div className='hero-body'>
+				<div className='container'>
+					<h1 className='title has-text-centered'>{titulo}</h1>
 				</div>
 			</div>
 		</section>
