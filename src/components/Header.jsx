@@ -2,13 +2,13 @@ import React from 'react';
 
 const Header = ({ titulo }) => {
 	return (
-		<section className='hero is-link is-bold'>
+		<header className='hero is-dark is-bold'>
 			<div className='hero-body'>
 				<div className='container'>
-					<h1 className='title has-text-centered'>{titulo}</h1>
+					<h1 className='title has-text-centered is-size-2'>{titulo}</h1>
 				</div>
 			</div>
-		</section>
+		</header>
 	);
 };
 
