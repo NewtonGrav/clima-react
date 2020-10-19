@@ -21,7 +21,7 @@ const Clima = ({ resultado }) => {
 		<div className='card'>
 			<div className='card-content'>
 				<div className='content has-black-text has-text-centered'>
-					<h1 className='title'>{name}</h1>
+					<h1 className='title'>Tiempo en {name}</h1>
 
 					<div className='is-flex is-justify-content-center	is-align-items-center	mb-4'>
 						<img
