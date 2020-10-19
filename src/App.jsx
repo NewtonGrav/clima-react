@@ -37,7 +37,7 @@ function App() {
 			<Header titulo='Clima React App' />
 			<div className='has-background-info p-6'>
 				<div className='container'>
-					<div className='columns'>
+					<div className='columns is-variable is-8'>
 						<div className='column is-6'>
 							<Formulario
 								busqueda={busqueda}
