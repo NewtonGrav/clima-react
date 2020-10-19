@@ -70,22 +70,26 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 				</div>
 			</div>
 
-			<div className='field is-full'>
+			<div className='field'>
 				<label className='label has-text-white' htmlFor='pais'>
 					País
 				</label>
 
-				<div className='control'>
-					<div className='select'>
+				<div className='control has-icons-left'>
+					<span className='select is-medium is-fullwidth'>
 						<select
 							name='pais'
 							id='pais'
+							className='is-full'
 							value={pais}
 							onChange={handlerChange}
 						>
 							{listaPaises}
 						</select>
-					</div>
+					</span>
+					<span className='icon is-small is-left'>
+						<i className='material-icons'>language</i>
+					</span>
 				</div>
 			</div>
 
