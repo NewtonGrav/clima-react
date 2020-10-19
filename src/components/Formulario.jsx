@@ -43,6 +43,12 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 		setHayConsulta(true);
 	};
 
+	let listaPaises = resultadoPaises.map((p) => (
+		<option value={p['FIPS']} key={p['Geoname ID']}>
+			{p['CLDR display name']}
+		</option>
+	));
+
 	return (
 		<form onSubmit={handlerSubmit}>
 			{error ? <Error mensaje='Todos los campos son obligatorios' /> : null}
