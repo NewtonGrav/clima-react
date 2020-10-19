@@ -25,7 +25,7 @@ const Clima = ({ resultado }) => {
 
 					<div className='is-flex is-justify-content-center	is-align-items-center	mb-4'>
 						<img
-							src={`http://openweathermap.org/img/wn/${resultado.weather[0].icon}@2x.png`}
+							src={`https://openweathermap.org/img/wn/${resultado.weather[0].icon}@2x.png`}
 							alt='Icon weather'
 							className='mr-4'
 						/>
