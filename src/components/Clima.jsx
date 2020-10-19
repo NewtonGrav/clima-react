@@ -37,10 +37,9 @@ const Clima = ({ resultado }) => {
 					</h2>
 					</div>
 
-					<div className='is-size-3'>
-						<p className='is-flex is-justify-content-center'>
-							<i className='material-icons'>arrow_drop_up</i>
-							{kelvinToCelsius(main?.temp_max)}{' '}
+							<p className='is-flex is-justify-content-center is-size-5 has-text-weight-bold'>
+								<span className='mr-2'>ST: </span>
+								{kelvinToCelsius(main?.feels_like)}
 							{celsiusLogo()}
 						</p>
 
