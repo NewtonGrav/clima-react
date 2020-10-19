@@ -23,15 +23,17 @@ const Clima = ({ resultado }) => {
 						{kelvinToCelsius(main?.temp)} <span>°C</span>
 					</h2>
 
-					<div className='is-size-4	'>
-						<p className='flex flex-center'>
+					<div className='is-size-3'>
+						<p className='is-flex is-justify-content-center'>
 							<i className='material-icons'>arrow_drop_up</i>
-							{kelvinToCelsius(main?.temp_max)} <span>°C</span>
+							{kelvinToCelsius(main?.temp_max)}{' '}
+							<span className='ml-2 is-size-6 is-align-self-flex-start'>°C</span>
 						</p>
 
-						<p className='flex flex-center'>
+						<p className='is-flex is-justify-content-center'>
 							<i className='material-icons'>arrow_drop_down</i>
-							{kelvinToCelsius(main?.temp_min)} <span>°C</span>
+							{kelvinToCelsius(main?.temp_min)}{' '}
+							<span className='ml-2 is-size-6 is-align-self-flex-start'>°C</span>
 						</p>
 					</div>
 				</div>
