@@ -5,6 +5,24 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 	const { ciudad, pais } = busqueda;
 
 	const [error, setError] = useState(false);
+	const [resultadoPaises, setResultadoPaises] = useState([]);
+
+	useEffect(() => {
+		const apiConsultarPaises = async () => {
+			const urlPaises =
+				'https://pkgstore.datahub.io/core/country-codes/country-codes_json/data/616b1fb83cbfd4eb6d9e7d52924bb00a/country-codes_json.json';
+			const promise = await fetch(urlPaises);
+			const resultado = await promise.json();
+
+			setResultadoPaises(resultado);
+		};
+
+		apiConsultarPaises();
+
+		setBusqueda({...busqueda, pais: 'AR'})
+		
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	const handlerChange = (e) => {
 		setBusqueda({
