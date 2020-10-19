@@ -2,13 +2,13 @@ import React from 'react';
 
 const Header = ({ titulo }) => {
 	return (
-		<nav>
-			<div className='nav-wrapper light-blue darken-2'>
-				<a href='#!' className='brand-logo center-align'>
-					{titulo}
-				</a>
+		<section class='hero is-link is-bold'>
+			<div class='hero-body'>
+				<div class='container'>
+					<h1 class='title has-text-centered'>{titulo}</h1>
+				</div>
 			</div>
-		</nav>
+		</section>
 	);
 };
 
