@@ -35,18 +35,17 @@ function App() {
 	return (
 		<Fragment>
 			<Header titulo='Clima React App' />
-
-			<div className='contenedor-form'>
+			<div className='has-background-link pt-6'>
 				<div className='container'>
-					<div className='row'>
-						<div className='col m6 s12'>
+					<div className='columns'>
+						<div className='column is-6'>
 							<Formulario
 								busqueda={busqueda}
 								setBusqueda={setBusqueda}
 								setHayConsulta={setHayConsulta}
 							/>
 						</div>
-						<div className='col m6 s12'>
+						<div className='column is-6'>
 							{resultado.cod === '404' ? (
 								<Error mensaje='No hay resultados para la ciudad especificada' />
 							) : (
