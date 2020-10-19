@@ -23,40 +23,39 @@ const Clima = ({ resultado }) => {
 				<div className='content has-black-text has-text-centered'>
 					<h1 className='title'>{name}</h1>
 
-					<div className='columns'>
-						<div className='column'>
-							<div className='is-flex is-justify-content-center	is-align-items-center	'>
-								<img
-									src={`http://openweathermap.org/img/wn/${resultado.weather[0].icon}@2x.png`}
-									alt='Icon weather'
-									className=''
-								/>
+					<div className='is-flex is-justify-content-center	is-align-items-center	mb-4'>
+						<img
+							src={`http://openweathermap.org/img/wn/${resultado.weather[0].icon}@2x.png`}
+							alt='Icon weather'
+							className=''
+						/>
 
-								<h2 className='is-flex has-text-link is-size-1 has-text-weight-bold	my-0'>
-									<span>{kelvinToCelsius(main?.temp)}</span>
-									{celsiusLogo()}
-								</h2>
-							</div>
+						<h2 className='is-flex has-text-link is-size-1 has-text-weight-bold	my-0'>
+							<span>{kelvinToCelsius(main?.temp)}</span>
+							{celsiusLogo()}
+						</h2>
+					</div>
 
-							<p className='is-flex is-justify-content-center is-size-5 has-text-weight-bold'>
-								<span className='mr-2'>ST: </span>
+					<div className='columns is-size-5'>
+						<div className='is-flex column is-justify-content-center'>
+							<p className='is-flex my-0 has-text-weight-bold'>
+								<span className=''>Sensación Térmica: </span>
 								{kelvinToCelsius(main?.feels_like)}
 								{celsiusLogo()}
 							</p>
 						</div>
 
-						<div className='column'>
-							<div className='is-flex is-justify-content-space-between is-size-5'>
-								<p className='is-flex my-0'>
-									<i className='material-icons is-align-self-center'>arrow_drop_down</i>
-									{kelvinToCelsius(main?.temp_min)} {celsiusLogo()}
-								</p>
-
-								<p className='is-flex'>
-									<i className='material-icons is-align-self-center'>arrow_drop_up</i>
-									{kelvinToCelsius(main?.temp_max)} {celsiusLogo()}
-								</p>
-							</div>
+						<div className='is-flex column is-justify-content-center'>
+							<p className='is-flex my-0 mr-4'>
+								<i className='material-icons is-align-self-center'>arrow_drop_down</i>
+								{kelvinToCelsius(main?.temp_min)}
+								{celsiusLogo()}
+							</p>
+							<p className='is-flex'>
+								<i className='material-icons is-align-self-center'>arrow_drop_up</i>
+								{kelvinToCelsius(main?.temp_max)}
+								{celsiusLogo()}
+							</p>
 						</div>
 					</div>
 				</div>
