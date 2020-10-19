@@ -20,7 +20,7 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 		apiConsultarPaises();
 
 		setBusqueda({...busqueda, pais: 'AR'})
-		
+
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
@@ -53,11 +53,11 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 		<form onSubmit={handlerSubmit}>
 			{error ? <Error mensaje='Todos los campos son obligatorios' /> : null}
 
-			<div class='field'>
-				<label class='label has-text-white' htmlFor='ciudad'>
+			<div className='field'>
+				<label className='label has-text-white' htmlFor='ciudad'>
 					Ciudad
 				</label>
-				<div class='control'>
+				<div className='control'>
 					<input
 						id='ciudad'
 						className='input'
@@ -70,19 +70,18 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 				</div>
 			</div>
 
-			<div className='field'>
+			<div className='field is-full'>
 				<label className='label has-text-white' htmlFor='pais'>
 					País
 				</label>
 
-				<div class='control'>
-					<div class='select'>
+				<div className='control'>
+					<div className='select'>
 						<select
 							name='pais'
 							id='pais'
 							value={pais}
 							onChange={handlerChange}
-							placeholder='Cargando...'
 						>
 							{listaPaises}
 						</select>
@@ -90,7 +89,7 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 				</div>
 			</div>
 
-			<div className='control'>
+			<div className='control mt-6'>
 				<button type='submit' className='button is-warning is-medium is-fullwidth'>
 					Obtener Clima
 				</button>
