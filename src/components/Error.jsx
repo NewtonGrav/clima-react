@@ -1,7 +1,14 @@
 import React from 'react';
 
 const Error = ({ mensaje }) => {
-	return <p className='error red darken-3'>{mensaje}</p>;
+	return (
+		<div className='message is-danger'>
+			<div className='message-header'>
+				<p>Error</p>
+			</div>
+			<div className='message-body'>{mensaje}</div>
+		</div>
+	);
 };
 
 export default Error;
