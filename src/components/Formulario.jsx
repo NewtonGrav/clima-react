@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Error from './Error';
 
 const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
@@ -58,33 +58,40 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 					Ciudad
 				</label>
 				<div class='control'>
-				<input
+					<input
 						id='ciudad'
 						className='input'
-					type='text'
+						type='text'
 						placeholder='Ciudad'
-					name='ciudad'
-					value={ciudad}
-					onChange={handlerChange}
-				/>
-			</div>
-			</div>
-
-			<label className='label has-text-white' htmlFor='pais'>
-				País
-			</label>
-			<div class='control'>
-				<div class='select'>
-				<select name='pais' id='pais' value={pais} onChange={handlerChange}>
-						{listaPaises}
-				</select>
+						name='ciudad'
+						value={ciudad}
+						onChange={handlerChange}
+					/>
 				</div>
 			</div>
 
-				<button
-					type='submit'
-					className='waves-effect waves-light btn-large btn-block yellow accent-4 black-text'
-				>
+			<div className='field'>
+				<label className='label has-text-white' htmlFor='pais'>
+					País
+				</label>
+
+				<div class='control'>
+					<div class='select'>
+						<select
+							name='pais'
+							id='pais'
+							value={pais}
+							onChange={handlerChange}
+							placeholder='Cargando...'
+						>
+							{listaPaises}
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div className='control'>
+				<button type='submit' className='button is-warning is-medium is-fullwidth'>
 					Obtener Clima
 				</button>
 			</div>
