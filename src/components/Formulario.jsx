@@ -29,15 +29,21 @@ const Formulario = ({ busqueda, setBusqueda, setHayConsulta }) => {
 		<form onSubmit={handlerSubmit}>
 			{error ? <Error mensaje='Todos los campos son obligatorios' /> : null}
 
-			<div className='input-field s12'>
+			<div class='field'>
+				<label class='label has-text-white' htmlFor='ciudad'>
+					Ciudad
+				</label>
+				<div class='control'>
 				<input
+						id='ciudad'
+						className='input'
 					type='text'
+						placeholder='Ciudad'
 					name='ciudad'
-					id='ciudad'
 					value={ciudad}
 					onChange={handlerChange}
 				/>
-				<label htmlFor='ciudad'>Ciudad</label>
+			</div>
 			</div>
 
 			<div className='input-field s12'>
