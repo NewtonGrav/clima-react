@@ -38,7 +38,7 @@ function App() {
 
 			<div className='has-background-info p-6'>
 				<div className='container'>
-					<div className='columns is-variable if-flex is-align-items-center is-8'>
+					<div className='columns is-variable if-flex is-align-items-center is-7'>
 						<div className='column is-6'>
 							<Formulario
 								busqueda={busqueda}

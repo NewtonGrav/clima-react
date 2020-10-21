@@ -37,26 +37,31 @@ const Clima = ({ resultado }) => {
 					</div>
 
 					<div className='columns is-size-5'>
-						<div className='is-flex column is-justify-content-center'>
+						<div className='is-flex column is-justify-content-center is-align-items-center'>
 							<p className='is-flex my-0'>
-								<span className='mr-2'>Sensación de </span>
-								<span className='has-text-weight-bold'>
+								ST:
+								<span className='ml-2 has-text-weight-bold'>
 									{kelvinToCelsius(main?.feels_like)}
 									{celsiusIcon()}
 								</span>
 							</p>
 						</div>
 
-						<div className='is-flex column is-justify-content-center'>
-							<p className='is-flex my-0 mr-4'>
-								<i className='material-icons is-align-self-center mr-1 is-size-2'>arrow_drop_down</i>
+						<div className='column is-flex is-justify-content-space-around	'>
+							<p className='is-flex my-0'>
+								<i className='material-icons is-align-self-center mr-1 is-size-2'>
+									arrow_drop_down
+								</i>
 								<span className='is-flex is-align-self-center	has-text-weight-bold'>
 									{kelvinToCelsius(main?.temp_min)}
 									{celsiusIcon()}
 								</span>
 							</p>
+
 							<p className='is-flex'>
-								<i className='material-icons is-align-self-center mr-1 is-size-2'>arrow_drop_up</i>
+								<i className='material-icons is-align-self-center mr-1 is-size-2'>
+									arrow_drop_up
+								</i>
 								<span className='is-flex is-align-self-center	has-text-weight-bold'>
 									{kelvinToCelsius(main?.temp_max)}
 									{celsiusIcon()}
